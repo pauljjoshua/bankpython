@@ -1,0 +1,828 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Assure &mdash; Wealth Bank</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="/" class="h2 mb-0">Assure Wealth Bank<span class="text-primary">.</span> </a></h1>
+          </div>
+
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+									<li><a href="/">HOME</a></li>
+
+									{% if user.is_authenticated %}
+									<li> Hello {{user.username}}</li>
+									<li><a href="credentials/logout">LOGOUT</a></li>
+									{% else %}
+                                    <li><a href="credentials/register">REGISTER</a></li>
+
+									<li><a href="credentials/login">LOGIN</a></li>
+									{% endif %}
+                <li class="has-children">
+                  <a href="#about-section" class="nav-link">BRANCHES</a>
+                  <ul class="dropdown">
+                    <li><a href="https://kanyakumari.tamilnaduonline.in/city-guide/banks-in-kanyakumari" class="nav-link">Kanyakumari</a></li>
+                    <li><a href="https://www.tirunelvelionline.in/city-guide/banks-in-tirunelveli" class="nav-link">ThirunelVeli</a></li>
+                    <li><a href="https://www.coimbatoreonline.in/city-guide/banks-in-coimbatore" class="nav-link">Coimbatore</a></li>
+                    <li><a href="https://www.maduraionline.in/city-guide/banks-in-madurai" class="nav-link">Madurai</a></li>
+                    <li><a href="https://salem.nic.in/public-utility/list-of-bank-branches-in-salem/" class="nav-link">Salem</a></li>
+                    <li class="has-children">
+                    </li>
+                  </ul>
+                </li>
+
+
+                <li><a href="#blog-section" class="nav-link">Blog</a></li>
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                <li class="social"><a href="https://www.facebook.com/profile.php?id=100006745909216&mibextid=ZbWKwL" class="nav-link"><span class="icon-facebook"></span></a></li>
+                <li class="social"><a href="https://twitter.com/home?utm_source=homescreen&utm_medium=shortcut" class="nav-link"><span class="icon-twitter"></span></a></li>
+                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+
+    </header>
+
+
+
+    <div class="site-blocks-cover overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade" id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+
+          <div class="col-md-10 mt-lg-5 text-center">
+            <div class="single-text owl-carousel">
+              <div class="slide">
+                <h1 class="text-uppercase" data-aos="fade-up">Banking Solutions</h1>
+                <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100">Assure Wealth Banking Software provides global solutions including software, systems integration, support, and associated consulting services.</p>
+                <div data-aos="fade-up" data-aos-delay="100">
+                  <a href="credentials/login" target="_blank" class="btn  btn-primary mr-2 mb-2">Get In Touch</a>
+                </div>
+              </div>
+
+              <div class="slide">
+                <h1 class="text-uppercase" data-aos="fade-up">Financing Solutions</h1>
+                <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">Our financing solutions combine securities services with banking solutions to offer the financing that adapts best to our clients' business requirements</p>
+                <div data-aos="fade-up" data-aos-delay="100">
+                  <a href="credentials/login" target="_blank" class="btn  btn-primary mr-2 mb-2">Get In Touch</a>
+                </div>
+              </div>
+
+              <div class="slide">
+                <h1 class="text-uppercase" data-aos="fade-up">Savings Accounts</h1>
+                <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">Assure Wealth Bank Savings Account also offer features like unlimited cash withdrawals at ATMs and zero-balance maintenance requirement</p>
+                <div data-aos="fade-up" data-aos-delay="100">
+                  <a href="credentials/login" target="_blank" class="btn  btn-primary mr-2 mb-2">Get In Touch</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <a href="#next" class="mouse smoothscroll">
+        <span class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </span>
+      </a>
+    </div>
+
+
+    <div class="site-section cta-big-image" id="about-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">About Us</h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">Everyone has their own definition of success. And it goes beyond finances. It includes your passions. Your concerns. Your interests. That’s why we assemble stories about today’s most exciting new emerging artists. Books you won’t be able to put down from our top reading list. If it’s on your mind, it’s on ours. And you’ll find it here</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="{% static 'images/img_2.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+
+            <h3 class="text-black mb-4">PRIVATE BANKING</h3>
+
+            <p>What is private banking? We get that question often, and think the answer is simple: It’s an enduring relationship that’s shaped around you. It’s a relationship with people who understand you, your life, your finances, and who are dedicated to delivering an elevated experience while helping you achieve your goals.</p>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="site-section" id="next">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="">
+            <img src="{% static 'images/flaticon-svg/svg/001-wallet.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+            <h3 class="card-title">Money Savings</h3>
+            <p>Record your expenses · Include saving in your budget · Find ways to cut spending · Set savings goals · Determine your financial priorities · Pick the right tools</p>
+          </div>
+          <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
+            <img src="{% static 'images/flaticon-svg/svg/004-cart.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+            <h3 class="card-title">Online Shoppings</h3>
+            <p>Online shopping is a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web ...</p>
+          </div>
+          <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'images/flaticon-svg/svg/006-credit-card.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+            <h3 class="card-title">Credit / Debit Cards</h3>
+            <p> Debit cards are linked to a bank account and draw directly from those funds (similar to a check)</p>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="{% static 'images/about_2.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3 class="h3 mb-4 text-black">Banking Solutions Is Our Priority</h3>
+              <p>Priority banking on the other hand deals with providing the same banking services to priority customers at specialised rates or offering a particular convenience level.</p>
+
+            </div>
+
+            <div class="mb-4">
+              <ul class="list-unstyled ul-check success">
+                <li>Easy</li>
+                <li>Secure</li>
+                <li>Satisfaction</li>
+              </ul>
+
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <section class="site-section border-bottom" id="team-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Meet Team</h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">Whether you're connecting with your community for an upcoming activity or working with teammates on a project, Assure Teams helps bring people together </p>
+          </div>
+        </div>
+        <div class="row">
+
+
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="">
+            <div class="team-member">
+              <figure>
+                <ul class="social">
+                  <li><a href="https://www.facebook.com/profile.php?id=100006745909216&mibextid=ZbWKwL"><span class="icon-facebook"></span></a></li>
+                  <li><a href="https://twitter.com/home?utm_source=homescreen&utm_medium=shortcut"><span class="icon-twitter"></span></a></li>
+                  <li><a href="https://www.linkedin.com/in/pauljjoshua"><span class="icon-linkedin"></span></a></li>
+                  <li><a href="https://instagram.com/pauljjoshua?igshid=MmU2YjMzNjRlOQ=="><span class="icon-instagram"></span></a></li>
+                </ul>
+                <img src="{% static 'images/joshua5.jpg' %}" alt="Image" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                <h3>Paul Joshua</h3>
+                <span class="position">Software Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <figure>
+                <ul class="social">
+                  <li><a href="https://www.facebook.com/profile.php?id=100006745909216&mibextid=ZbWKwL"><span class="icon-facebook"></span></a></li>
+                  <li><a href="https://twitter.com/home?utm_source=homescreen&utm_medium=shortcut"><span class="icon-twitter"></span></a></li>
+                  <li><a href="https://www.linkedin.com/in/pauljjoshua"><span class="icon-linkedin"></span></a></li>
+                  <li><a href="https://instagram.com/pauljjoshua?igshid=MmU2YjMzNjRlOQ=="><span class="icon-instagram"></span></a></li>
+                </ul>
+                <img src="{% static 'images/joshua2.jpg' %}" alt="Image" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                <h3>Paul Joshua</h3>
+                <span class="position">Data Analyst</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <figure>
+                <ul class="social">
+                  <li><a href="https://www.facebook.com/profile.php?id=100006745909216&mibextid=ZbWKwL"><span class="icon-facebook"></span></a></li>
+                  <li><a href="https://twitter.com/home?utm_source=homescreen&utm_medium=shortcut"><span class="icon-twitter"></span></a></li>
+                  <li><a href="https://www.linkedin.com/in/pauljjoshua"><span class="icon-linkedin"></span></a></li>
+                  <li><a href="https://instagram.com/pauljjoshua?igshid=MmU2YjMzNjRlOQ=="><span class="icon-instagram"></span></a></li>
+                </ul>
+                <img src="{% static 'images/joshua4.jpg' %}" alt="Image" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                <h3>Paul Joshua</h3>
+                <span class="position">Python full stack developer</span>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="site-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">How It Works</h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">We are a leader in investment banking, financial services for consumers and small business, commercial banking, financial transactions processing and asset management.</p>
+          </div>
+        </div>
+
+        <div class="row align-items-lg-center" >
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+
+            <div class="owl-carousel slide-one-item-alt">
+              <img src="{% static 'images/img_1.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'images/img_2.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'images/img_3.jpg' %}" alt="Image" class="img-fluid">
+            </div>
+            <div class="custom-direction">
+              <a href="#" class="custom-prev"><span><span class="icon-keyboard_backspace"></span></span></a><a href="#" class="custom-next"><span><span class="icon-keyboard_backspace"></span></span></a>
+            </div>
+
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="owl-carousel slide-one-item-alt-text">
+              <div>
+                <h2 class="section-title mb-3">01. Online Applications</h2>
+                <p>Discover internship, career & job opportunities for students & experienced professionals at Assure Wealth Bank.</p>
+
+                <p><a href="credentials/form" class="btn btn-primary mr-2 mb-2">Learn More</a></p>
+              </div>
+              <div>
+                <h2 class="section-title mb-3">02. Get an approval</h2>
+                <p>Assure Wealth Bank has received approval from India's central bank to name Paul Joshua as the lender's chief executive officer in the country.</p>
+
+              </div>
+              <div>
+                <h2 class="section-title mb-3">03. Card delivery</h2>
+                <p>Assure Wealth Bank Virtual Cards let you make payments instantly. Send single use (SUA) virtual cards to employees on-demand through our mobile app</p>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="site-section border-bottom bg-light" id="services-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title mb-3">Our Services</h2>
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4">
+              <div class="unit-4-icon">
+                <a href="#">
+                <img src="{% static 'images/flaticon-svg/svg/001-wallet.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+                </a>
+              </div>
+              <div>
+                <h3>Business Consulting</h3>
+                <p>We provide comprehensive services to support your business by leveraging strategy to drive people, process, information and technology considerations.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="unit-4">
+              <div class="unit-4-icon">
+                <img src="{% static 'images/flaticon-svg/svg/006-credit-card.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+              </div>
+              <div>
+                <h3>Credit Card</h3>
+                <p>Credit Card - Compare & Apply Credit Cards Online. Convenient, handy, and useful – Credit Cards give you the freedom to make payments for your various expenses.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="unit-4">
+              <div class="unit-4-icon">
+                <img src="{% static 'images/flaticon-svg/svg/002-rich.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+              </div>
+              <div>
+                <h3>Income Monitoring</h3>
+                <p>The primary purpose when monitoring expenditure against income is to ensure that expenditure does not exceed the available income.</p>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+            <div class="unit-4">
+              <div class="unit-4-icon">
+                <img src="{% static 'images/flaticon-svg/svg/003-notes.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+              </div>
+              <div>
+                <h3>Insurance Consulting</h3>
+                <p>Insurance consultants review individual and company requirements before proposing tailor-made coverage plans</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="unit-4">
+              <div class="unit-4-icon">
+                <img src="{% static 'images/flaticon-svg/svg/004-cart.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+              </div>
+              <div>
+                <h3>Financial Investment</h3>
+                <p> A financial investment is a financial product like a cryptocurrency or a stock that is bought with the goal of making money.</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="unit-4">
+              <div class="unit-4-icon">
+                <img src="{% static 'images/flaticon-svg/svg/005-megaphone.svg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+              </div>
+              <div>
+                <h3>Financial Management</h3>
+                <p>financial management is the business function that deals with investing the available financial resources in a way that greater business success and return-on-investment (ROI) is achieved.</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="fade">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">Happy Customers</h2>
+          </div>
+        </div>
+      </div>
+      <div class="slide-one-item home-slider owl-carousel">
+          <div>
+            <div class="testimonial">
+
+              <blockquote class="mb-5">
+                <p>I have had several banks in my life, and have been fairly satisfied. I switched to Chase a few years ago because my mortgage was with them</p>
+              </blockquote>
+
+              <figure class="mb-4 d-flex align-items-center justify-content-center">
+                <div><img src="{% static 'images/jillu1.jpg' %}" alt="Image" class="w-50 img-fluid mb-3"></div>
+                <p>Jilfer</p>
+              </figure>
+            </div>
+          </div>
+          <div>
+            <div class="testimonial">
+
+              <blockquote class="mb-5">
+                <p>&ldquo;After several unsuccessful attempts to dispute some derogatory marks on my credit files, I finally got my way through by removing all derogatory marks on my credit and credit score improvement with the assistance of Dexframe-Credit-Repair who I got recommended to while surfing the internet.&rdquo;</p>
+              </blockquote>
+              <figure class="mb-4 d-flex align-items-center justify-content-center">
+                <div><img src="{% static 'images/kavish.jpg' %}" alt="Image" class="w-50 img-fluid mb-3"></div>
+                <p>Kavish</p>
+              </figure>
+
+            </div>
+          </div>
+
+          <div>
+            <div class="testimonial">
+
+              <blockquote class="mb-5">
+                <p>&ldquo;Pretty good benefits and decent pay for being an entry level banking position. Difficult to go up the ladder unless you're willing to put in the work.&rdquo;</p>
+              </blockquote>
+              <figure class="mb-4 d-flex align-items-center justify-content-center">
+                <div><img src="{% static 'images/jillu2.jpg' %}" alt="Image" class="w-50 img-fluid mb-3"></div>
+                <p>Vijini</p>
+              </figure>
+
+
+            </div>
+          </div>
+
+
+        </div>
+    </section>
+
+    <section class="site-section bg-light" id="pricing-section">
+      <div class="container">
+
+        <div class="row site-section" id="faq-section">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title">Frequently Ask Questions</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
+            <p> Yes, you can use both Stripe and PayPal on your website. You will have to set up accounts with each, allowing your customers to choose their preferred payment method.</p>
+            </div>
+
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="text-black h4 mb-4">What available is refund period?</h3>
+              <p>It will take 3-21 days for the money to show in your bank account depending on your bank's policy.</p>
+            </div>
+
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
+            <p> No, you cannot integrate Stripe with PayPal. However, you can use both payment gateways on your online store to accept payments separately.</p>
+            </div>
+
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="text-black h4 mb-4">What available is refund period?</h3>
+              <p>Refunds can take 5-10 days to process due to the exchange of information between multiple parties involved in the refund process.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="text-black h4 mb-4">Where are you from?</h3>
+              <p>INDIA</p>
+            </div>
+
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="text-black h4 mb-4">What is your opening time?</h3>
+              <p>9.00 am to 10 pm</p>
+            </div>
+
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-black h4 mb-4">Can I accept both Paypal and Stripe?</h3>
+            <p>No, you cannot integrate Stripe with PayPal. However, you can use both payment gateways on your online store to accept payments separately.</p>
+            </div>
+
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="text-black h4 mb-4">What available is refund period?</h3>
+              <p>It will take 3-21 days for the money to show in your bank account depending on your bank's policy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section" id="about-section">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="{% static 'images/img_4.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+
+
+            <div class="row">
+
+
+
+              <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="">
+                <div class="unit-4 d-flex">
+                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-head"></span></div>
+                  <div>
+                    <h3>Bank Loan</h3>
+                    <p>Check out the latest personal loan interest rates at HDFC Bank. Apply for a low-interest personal loan with minimal documentation and get quick loan ...</p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="unit-4 d-flex">
+                  <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-smartphone"></span></div>
+                  <div>
+                    <h3>Banking Consulation </h3>
+                    <p>A banking consultant greets bank customers and gives advice regarding accounts and bank services</p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+
+    <section class="site-section" id="blog-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title mb-3">Our Blog</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+            <div class="h-entry">
+              <a href="#">
+                <img src="{% static 'images/img_1.jpg' %}" alt="Image" class="img-fluid">
+              </a>
+              <h2 class="font-size-regular"><a href="#">Banking is good for business? Why?</a></h2>
+              <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2023<span class="mx-2">&bullet;</span> <a href="https://www.investopedia.com/terms/b/business-banking.asp">News</a></div>
+              <p>Business banking is also called commercial or corporate banking. Banks provide financial and advisory services to small and medium businesses as well as larger corporations. These services are tailored to the specific needs of each business.</p>
+              <p><a href="https://www.investopedia.com/terms/b/business-banking.asp">Continue Reading...</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-entry">
+              <a href="#">
+                <img src="{% static 'images/img_4.jpg' %}" alt="Image" class="img-fluid">
+              </a>
+              <h2 class="font-size-regular"><a href="#">Banking is good for business? Why?</a></h2>
+              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="https://www.investopedia.com/terms/b/business-banking.asp">News</a></div>
+              <p>Business banking is a company's financial dealings with an institution that provides business loans, credit, savings accounts, and checking accounts, specifically designed for companies rather than for individuals</p>
+              <p><a href="https://www.investopedia.com/terms/b/business-banking.asp">Continue Reading...</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-entry">
+              <a href="#">
+                <img src="{% static 'images/img_3.jpg' %}" alt="Image" class="img-fluid">
+              </a>
+              <h2 class="font-size-regular"><a href="https://www.investopedia.com/terms/b/business-banking.asp">Banking is good for business? Why?</a></h2>
+              <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <p>Demand for business banking is increasing in the United States, as the business sector continues to grow. Commercial banks have been declining since 2002, when there were 7,870 commercial banks, compared to 4,708 in 2018.</p>
+              <p><a href="https://www.investopedia.com/terms/b/business-banking.asp">Continue Reading...</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="site-section bg-light" id="contact-section" data-aos="fade">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">Contact Us</h2>
+          </div>
+        </div>
+        <div class="row mb-5">
+
+
+
+          <div class="col-md-4 text-center">
+            <p class="mb-4">
+              <span class="icon-room d-block h2 text-primary"></span>
+              <span>St Thomas town post, Bengaluru, Pin-560084</span>
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <p class="mb-4">
+              <span class="icon-phone d-block h2 text-primary"></span>
+              <a href="#">+91 6385476358</a>
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <p class="mb-0">
+              <span class="icon-mail_outline d-block h2 text-primary"></span>
+              <a href="https://mail.google.com/">pauljjoshua@gmail.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-5">
+
+
+
+            <form action="#" class="p-5 bg-white">
+
+              <h2 class="h4 text-black mb-5">Contact Form</h2>
+
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="fname" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="lname">Last Name</label>
+                  <input type="text" id="lname" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label>
+                  <input type="email" id="email" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Subject</label>
+                  <input type="subject" id="subject" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Message</label>
+                  <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-5">
+                <h2 class="footer-heading mb-4">About Us</h2>
+                <p>We do business in a world class way. We are big thinkers—trusted advisors, strategists and investors who are designing the entire private banking relationship around you. Whether it's organizing your money, introducing you to new opportunities, managing your taxes effectively, arranging trusts or planning your estate, our job is to make your financial life easy and seamless, so you can focus on what you care about most. With your goals and preferences always in mind, your team will move mountains to meet what the moment calls for.</p>
+              </div>
+              <div class="col-md-3 ml-auto">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#about-section" class="smoothscroll">Terms</a></li>
+                  <li><a href="#about-section" class="smoothscroll">Policy</a></li>
+                  <li><a href="#about-section" class="smoothscroll">About Us</a></li>
+                  <li><a href="#services-section" class="smoothscroll">Services</a></li>
+                  <li><a href="#testimonials-section" class="smoothscroll">Testimonials</a></li>
+                  <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-md-3 footer-social">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="https://www.facebook.com/profile.php?id=100006745909216&mibextid=ZbWKwL" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="https://twitter.com/home?utm_source=homescreen&utm_medium=shortcut" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="https://instagram.com/pauljjoshua?igshid=MmU2YjMzNjRlOQ==" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="https://www.linkedin.com/in/pauljjoshua" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+            <form action="#" method="post" class="footer-subscribe">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              <p>Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | Assure & Duvera
+                 <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://instagram.com/pauljjoshua?igshid=MmU2YjMzNjRlOQ==" target="_blank">PAUL JOSHUA</a>
+              </p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- .site-wrap -->
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+
+  </body>
+</html>
